@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Premier Cleaning | Mold Remediation CT</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy: #0a1628;
+  --deep: #050e1a;
+  --blue: #1565c0;
+  --blue-light: #2196f3;
+  --fire: #ff6b00;
+  --fire-light: #ffab40;
+  --white: #ffffff;
+  --mist: rgba(255,255,255,0.07);
+  --text: rgba(255,255,255,0.75);
+  --border: rgba(255,255,255,0.1);
+}
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--deep);
+  color: var(--white);
+  font-family: 'DM Sans', sans-serif;
+  overflow-x: hidden;
+}
+
+/* ── NAV ── */
+nav {
+  position: fixed; top:0; left:0; right:0; z-index:100;
+  display: flex; align-items:center; justify-content:space-between;
+  padding: 0 60px;
+  height: 72px;
+  background: rgba(5,14,26,0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+}
+.nav-logo { display:flex; align-items:center; gap:14px; }
+.nav-logo-icon { width:42px; height:42px; }
+.nav-brand {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 22px;
+  letter-spacing: 0.08em;
+  line-height: 1;
+}
+.nav-brand span { color: var(--fire); }
+.nav-links { display:flex; gap:36px; }
+.nav-links a {
+  font-size: 13px; font-weight:500; letter-spacing:0.1em;
+  text-transform: uppercase; color: var(--text);
+  text-decoration: none; transition: color .2s;
+}
+.nav-links a:hover { color: var(--white); }
+.nav-cta {
+  background: var(--fire); color: var(--white);
+  font-size:13px; font-weight:600; letter-spacing:0.1em;
+  text-transform:uppercase; padding: 10px 22px; border-radius:4px;
+  text-decoration:none; transition: background .2s;
+}
+.nav-cta:hover { background: var(--fire-light); }
+
+/* ── HERO ── */
+.hero {
+  min-height: 100vh;
+  display: flex; align-items:center;
+  position: relative; overflow:hidden;
+  padding: 100px 60px 60px;
+}
+.hero-bg {
+  position:absolute; inset:0;
+  background: radial-gradient(ellipse at 70% 50%, rgba(21,101,192,0.18) 0%, transparent 60%),
+              radial-gradient(ellipse at 20% 80%, rgba(255,107,0,0.12) 0%, transparent 50%),
+              linear-gradient(180deg, #050e1a 0%, #0a1628 100%);
+}
+.hero-grid {
+  position:absolute; inset:0; opacity:0.04;
+  background-image: linear-gradient(rgba(255,255,255,.4) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(255,255,255,.4) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+.hero-content { position:relative; z-index:2; max-width:680px; }
+.hero-eyebrow {
+  display:inline-flex; align-items:center; gap:10px;
+  background: rgba(255,107,0,0.15); border:1px solid rgba(255,107,0,0.3);
+  color: var(--fire-light); font-size:12px; font-weight:600;
+  letter-spacing:0.18em; text-transform:uppercase;
+  padding: 7px 16px; border-radius:30px; margin-bottom:28px;
+}
+.hero-eyebrow::before { content:'●'; font-size:8px; animation: pulse 2s infinite; }
+@keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.3} }
+h1 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(64px, 9vw, 110px);
+  line-height: 0.92; letter-spacing: 0.02em;
+  margin-bottom: 28px;
+}
+h1 .blue { color: var(--blue-light); }
+h1 .fire { color: var(--fire); }
+.hero-sub {
+  font-size: 18px; font-weight:300; color: var(--text);
+  line-height: 1.7; max-width:520px; margin-bottom:40px;
+}
+.hero-actions { display:flex; gap:16px; flex-wrap:wrap; align-items:center; }
+.btn-primary {
+  display:inline-flex; align-items:center; gap:10px;
+  background: var(--fire); color:#fff;
+  font-size:15px; font-weight:600; letter-spacing:0.06em;
+  padding:16px 32px; border-radius:5px; text-decoration:none;
+  transition: transform .2s, box-shadow .2s;
+  box-shadow: 0 4px 24px rgba(255,107,0,0.35);
+}
+.btn-primary:hover { transform:translateY(-2px); box-shadow:0 8px 32px rgba(255,107,0,0.45); }
+.btn-secondary {
+  display:inline-flex; align-items:center; gap:10px;
+  border:1px solid var(--border); color:var(--white);
+  font-size:15px; font-weight:500; letter-spacing:0.06em;
+  padding:16px 32px; border-radius:5px; text-decoration:none;
+  transition: border-color .2s, background .2s;
+}
+.btn-secondary:hover { border-color:rgba(255,255,255,0.3); background:var(--mist); }
+.hero-phones {
+  margin-top:48px; display:flex; gap:32px; flex-wrap:wrap;
+}
+.hero-phone { display:flex; flex-direction:column; gap:2px; }
+.hero-phone-label {
+  font-size:10px; font-weight:600; letter-spacing:0.2em;
+  text-transform:uppercase; color:var(--fire-light); opacity:.7;
+}
+.hero-phone-num {
+  font-family:'Bebas Neue', sans-serif; font-size:28px; letter-spacing:0.06em;
+  color:var(--white);
+}
+.hero-phone-name { font-size:12px; color:var(--text); }
+.hero-visual {
+  position:absolute; right:0; top:0; bottom:0;
+  width:48%; overflow:hidden;
+}
+.hero-visual-overlay {
+  position:absolute; inset:0; z-index:1;
+  background: linear-gradient(to right, var(--deep) 0%, transparent 35%),
+              linear-gradient(to top, var(--deep) 0%, transparent 30%);
+}
+.hero-visual img { width:100%; height:100%; object-fit:cover; object-position:center; }
+.hero-badge {
+  position:absolute; bottom:48px; right:60px; z-index:3;
+  background: rgba(5,14,26,0.85); backdrop-filter:blur(12px);
+  border:1px solid var(--border); border-radius:12px;
+  padding:18px 24px; display:flex; flex-direction:column; gap:4px;
+}
+.hero-badge-num {
+  font-family:'Bebas Neue', sans-serif; font-size:42px; color:var(--fire);
+  line-height:1;
+}
+.hero-badge-text { font-size:12px; color:var(--text); letter-spacing:0.06em; }
+
+/* ── AREA BANNER ── */
+.area-banner {
+  background: var(--blue); padding:16px 60px;
+  display:flex; align-items:center; justify-content:center; gap:12px;
+  font-size:14px; font-weight:500; letter-spacing:0.06em;
+}
+.area-banner strong { font-weight:700; }
+
+/* ── SECTION SHARED ── */
+section { padding: 100px 60px; }
+.section-label {
+  font-size:11px; font-weight:600; letter-spacing:0.22em;
+  text-transform:uppercase; color:var(--fire); margin-bottom:14px;
+}
+h2 {
+  font-family:'Bebas Neue', sans-serif;
+  font-size: clamp(44px, 5vw, 68px);
+  line-height:0.95; letter-spacing:0.02em; margin-bottom:20px;
+}
+.section-sub { font-size:17px; color:var(--text); line-height:1.7; max-width:560px; margin-bottom:56px; }
+
+/* ── WHY US ── */
+.why { background: var(--navy); }
+.why-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:2px; }
+.why-card {
+  background: var(--mist); padding:44px 36px;
+  border:1px solid var(--border); transition: background .3s;
+}
+.why-card:hover { background: rgba(255,255,255,0.1); }
+.why-icon {
+  width:52px; height:52px; border-radius:10px;
+  display:flex; align-items:center; justify-content:center;
+  font-size:24px; margin-bottom:20px;
+}
+.why-icon.blue { background: rgba(33,150,243,0.15); }
+.why-icon.fire { background: rgba(255,107,0,0.15); }
+.why-card h3 {
+  font-family:'Bebas Neue', sans-serif; font-size:26px;
+  letter-spacing:0.04em; margin-bottom:10px;
+}
+.why-card p { font-size:14px; color:var(--text); line-height:1.7; }
+
+/* ── SERVICES ── */
+.services-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:2px; }
+.service-card {
+  background: var(--mist); border:1px solid var(--border);
+  padding:40px 36px; position:relative; overflow:hidden;
+  transition: background .3s;
+}
+.service-card:hover { background: rgba(255,255,255,0.08); }
+.service-card::before {
+  content:''; position:absolute; top:0; left:0;
+  width:3px; height:100%; background:var(--fire);
+  transform: scaleY(0); transform-origin:bottom;
+  transition: transform .3s;
+}
+.service-card:hover::before { transform:scaleY(1); }
+.service-num {
+  font-family:'Bebas Neue', sans-serif; font-size:64px;
+  color:rgba(255,255,255,0.05); line-height:1;
+  position:absolute; top:16px; right:24px;
+}
+.service-icon { font-size:32px; margin-bottom:16px; }
+.service-card h3 {
+  font-family:'Bebas Neue', sans-serif; font-size:28px;
+  letter-spacing:0.04em; margin-bottom:10px;
+}
+.service-card p { font-size:14px; color:var(--text); line-height:1.7; }
+
+/* ── COVERAGE ── */
+.coverage { background: var(--navy); }
+.coverage-inner { display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center; }
+.coverage-map {
+  background: rgba(21,101,192,0.08); border:1px solid rgba(21,101,192,0.2);
+  border-radius:16px; padding:48px;
+  display:flex; flex-direction:column; align-items:center; justify-content:center;
+  min-height:340px; position:relative;
+}
+.coverage-map-label {
+  font-family:'Bebas Neue', sans-serif; font-size:18px;
+  letter-spacing:0.12em; color:var(--blue-light); margin-bottom:24px;
+}
+.coverage-cities { display:flex; flex-wrap:wrap; gap:10px; justify-content:center; }
+.city-tag {
+  background:rgba(33,150,243,0.12); border:1px solid rgba(33,150,243,0.25);
+  color:var(--blue-light); font-size:13px; font-weight:500;
+  padding:6px 14px; border-radius:20px; letter-spacing:0.04em;
+}
+.city-tag.main {
+  background:rgba(255,107,0,0.15); border-color:rgba(255,107,0,0.3);
+  color:var(--fire-light);
+}
+.coverage-text { display:flex; flex-direction:column; gap:24px; }
+.coverage-stat { border-left:2px solid var(--fire); padding-left:20px; }
+.coverage-stat-num {
+  font-family:'Bebas Neue', sans-serif; font-size:52px; color:var(--white); line-height:1;
+}
+.coverage-stat-label { font-size:14px; color:var(--text); }
+
+/* ── CONTACT ── */
+.contact { position:relative; overflow:hidden; }
+.contact::before {
+  content:''; position:absolute; inset:0;
+  background: radial-gradient(ellipse at 30% 50%, rgba(255,107,0,0.1) 0%, transparent 60%),
+              radial-gradient(ellipse at 80% 50%, rgba(21,101,192,0.12) 0%, transparent 50%);
+}
+.contact-inner { position:relative; z-index:1; display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:start; }
+.contact-cards { display:flex; flex-direction:column; gap:16px; margin-top:8px; }
+.contact-card {
+  background:var(--mist); border:1px solid var(--border);
+  border-radius:12px; padding:28px 32px;
+  display:flex; align-items:center; gap:20px;
+}
+.contact-card-icon {
+  width:50px; height:50px; border-radius:10px;
+  background:rgba(255,107,0,0.15);
+  display:flex; align-items:center; justify-content:center; font-size:22px;
+  flex-shrink:0;
+}
+.contact-card-info {}
+.contact-card-name { font-size:12px; color:var(--fire-light); font-weight:600; letter-spacing:0.1em; text-transform:uppercase; margin-bottom:4px; }
+.contact-card-num {
+  font-family:'Bebas Neue', sans-serif; font-size:30px; letter-spacing:0.04em;
+  color:var(--white);
+}
+.contact-card-role { font-size:12px; color:var(--text); margin-top:2px; }
+.contact-info-box {
+  background:var(--mist); border:1px solid var(--border); border-radius:12px;
+  padding:40px 36px;
+}
+.contact-info-box h3 {
+  font-family:'Bebas Neue', sans-serif; font-size:32px; margin-bottom:20px; letter-spacing:0.04em;
+}
+.info-row { display:flex; gap:14px; align-items:flex-start; margin-bottom:18px; }
+.info-icon { font-size:18px; margin-top:2px; flex-shrink:0; }
+.info-text { font-size:14px; color:var(--text); line-height:1.6; }
+.info-text strong { color:var(--white); display:block; font-size:15px; margin-bottom:2px; }
+
+/* ── FOOTER ── */
+footer {
+  background:var(--deep); border-top:1px solid var(--border);
+  padding:32px 60px; display:flex; align-items:center; justify-content:space-between;
+}
+.footer-brand { font-family:'Bebas Neue', sans-serif; font-size:18px; letter-spacing:0.08em; }
+.footer-brand span { color:var(--fire); }
+.footer-copy { font-size:12px; color:var(--text); }
+.footer-phones { display:flex; gap:24px; }
+.footer-phone { font-size:13px; color:var(--text); }
+.footer-phone strong { color:var(--white); }
+
+/* ── LOGO SVG ── */
+.logo-svg { width:42px; height:42px; }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">
+    <svg class="logo-svg" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- Water drop base -->
+      <path d="M21 4 C21 4 8 18 8 26 C8 33.7 13.9 40 21 40 C28.1 40 34 33.7 34 26 C34 18 21 4 21 4Z" fill="url(#waterGrad)" opacity="0.9"/>
+      <!-- Fire flame inside -->
+      <path d="M21 36 C21 36 15 28 15 23 C15 21 16 19.5 17.5 19 C17 21 18 22.5 19.5 22.5 C19.5 20 21 17 21 17 C21 17 23 20.5 22.5 22.5 C24 22.5 25 21 24.5 19 C26 19.5 27 21 27 23 C27 28 21 36 21 36Z" fill="url(#fireGrad)"/>
+      <defs>
+        <linearGradient id="waterGrad" x1="21" y1="4" x2="21" y2="40" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stop-color="#42a5f5"/>
+          <stop offset="100%" stop-color="#1565c0"/>
+        </linearGradient>
+        <linearGradient id="fireGrad" x1="21" y1="17" x2="21" y2="36" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stop-color="#ffab40"/>
+          <stop offset="60%" stop-color="#ff6b00"/>
+          <stop offset="100%" stop-color="#e53935"/>
+        </linearGradient>
+      </defs>
+    </svg>
+    <div class="nav-brand">Premier<span> Cleaning</span></div>
+  </div>
+  <div class="nav-links">
+    <a href="#services">Services</a>
+    <a href="#coverage">Coverage</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <a href="tel:2034003674" class="nav-cta">Free Quote</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">Serving Stamford to New Haven &amp; Danbury</div>
+    <h1>Mold<br><span class="blue">Remediation</span><br><span class="fire">Experts</span></h1>
+    <p class="hero-sub">Connecticut's trusted mold removal specialists. Fast response, certified remediation, and air you can breathe again — guaranteed.</p>
+    <div class="hero-actions">
+      <a href="tel:2034003674" class="btn-primary">📞 Call for Free Quote</a>
+      <a href="#services" class="btn-secondary">Our Services ↓</a>
+    </div>
+    <div class="hero-phones">
+      <div class="hero-phone">
+        <span class="hero-phone-label">Marvin</span>
+        <span class="hero-phone-num">(203) 400-3674</span>
+        <span class="hero-phone-name">Owner &amp; Operator</span>
+      </div>
+      <div style="width:1px;background:rgba(255,255,255,0.1);margin:0 4px;"></div>
+      <div class="hero-phone">
+        <span class="hero-phone-label">Camilo</span>
+        <span class="hero-phone-num">(203) 309-8128</span>
+        <span class="hero-phone-name">Owner &amp; Operator</span>
+      </div>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <div class="hero-visual-overlay"></div>
+    <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=900&q=80" alt="Mold remediation professionals at work" />
+  </div>
+  <div class="hero-badge">
+    <span class="hero-badge-num">24/7</span>
+    <span class="hero-badge-text">Emergency Response<br>Available</span>
+  </div>
+</section>
+
+<!-- AREA BANNER -->
+<div class="area-banner">
+  🗺️ Serving all of <strong>Fairfield &amp; New Haven Counties</strong> — Stamford · Bridgeport · New Haven · Danbury · Greenwich · Norwalk · Waterbury &amp; surrounding areas
+</div>
+
+<!-- WHY US -->
+<section class="why" id="why">
+  <div class="section-label">Why Premier Cleaning</div>
+  <h2>The CT Standard<br>For Mold Removal</h2>
+  <p class="section-sub">When mold is found, every hour matters. We move fast, work clean, and leave your home safer than we found it.</p>
+  <div class="why-grid">
+    <div class="why-card">
+      <div class="why-icon fire">🔥</div>
+      <h3>Fast Response</h3>
+      <p>We answer the call 24/7. Same-day assessment available across our entire service area from Stamford to Danbury.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon blue">💧</div>
+      <h3>Complete Remediation</h3>
+      <p>We don't just treat the surface. We eliminate mold at the source — walls, ceilings, basements, crawl spaces, and attics.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon fire">🛡️</div>
+      <h3>Safe &amp; Certified</h3>
+      <p>All work is done safely with proper containment, HEPA filtration, and disposal — protecting your family throughout the process.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon blue">🏠</div>
+      <h3>Residential &amp; Commercial</h3>
+      <p>From single-family homes to large commercial properties, we have the equipment and manpower to handle any job size.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon fire">💰</div>
+      <h3>Free Estimates</h3>
+      <p>No obligation, no hidden fees. We come out, assess the situation, and give you a straight price before any work begins.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon blue">⭐</div>
+      <h3>Local &amp; Trusted</h3>
+      <p>Owned and operated by Marvin and Camilo — Connecticut locals who take pride in every job they put their name on.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="section-label">What We Do</div>
+  <h2>Full-Service<br>Mold Solutions</h2>
+  <p class="section-sub">From initial inspection to final clearance testing, we handle every step of the remediation process.</p>
+  <div class="services-grid">
+    <div class="service-card">
+      <span class="service-num">01</span>
+      <div class="service-icon">🔍</div>
+      <h3>Mold Inspection</h3>
+      <p>Thorough visual inspection and moisture mapping to locate all mold growth — even hidden inside walls and under floors.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-num">02</span>
+      <div class="service-icon">🧹</div>
+      <h3>Mold Removal &amp; Remediation</h3>
+      <p>Safe, contained removal of all mold growth using industry-grade equipment, HEPA vacuuming, and antimicrobial treatment.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-num">03</span>
+      <div class="service-icon">💧</div>
+      <h3>Water Damage Cleanup</h3>
+      <p>Rapid water extraction and drying to stop mold before it starts. We address the root cause, not just the symptoms.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-num">04</span>
+      <div class="service-icon">🌬️</div>
+      <h3>Air Quality Testing</h3>
+      <p>Before-and-after air sampling to confirm your home's air is clean and safe for your family to breathe.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-num">05</span>
+      <div class="service-icon">🏚️</div>
+      <h3>Basement &amp; Crawl Space</h3>
+      <p>Specialized treatment for below-grade spaces where moisture and mold are most common. Encapsulation available.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-num">06</span>
+      <div class="service-icon">🏗️</div>
+      <h3>Attic Mold Removal</h3>
+      <p>Full attic remediation including sheathing treatment, insulation removal, and ventilation correction to prevent regrowth.</p>
+    </div>
+  </div>
+</section>
+
+<!-- COVERAGE -->
+<section class="coverage" id="coverage">
+  <div class="coverage-inner">
+    <div>
+      <div class="section-label">Service Area</div>
+      <h2>All Across<br>Connecticut</h2>
+      <p class="section-sub">We cover the full corridor from Stamford up through New Haven and out to Danbury — no matter where you are, help is close.</p>
+      <div class="coverage-text">
+        <div class="coverage-stat">
+          <div class="coverage-stat-num">50+</div>
+          <div class="coverage-stat-label">Cities &amp; Towns Served</div>
+        </div>
+        <div class="coverage-stat">
+          <div class="coverage-stat-num">2hrs</div>
+          <div class="coverage-stat-label">Average Response Time</div>
+        </div>
+      </div>
+    </div>
+    <div class="coverage-map">
+      <div class="coverage-map-label">📍 Our Coverage</div>
+      <div class="coverage-cities">
+        <span class="city-tag main">Stamford</span>
+        <span class="city-tag main">New Haven</span>
+        <span class="city-tag main">Danbury</span>
+        <span class="city-tag">Bridgeport</span>
+        <span class="city-tag">Greenwich</span>
+        <span class="city-tag">Norwalk</span>
+        <span class="city-tag">Waterbury</span>
+        <span class="city-tag">Milford</span>
+        <span class="city-tag">West Haven</span>
+        <span class="city-tag">Hamden</span>
+        <span class="city-tag">Trumbull</span>
+        <span class="city-tag">Fairfield</span>
+        <span class="city-tag">Westport</span>
+        <span class="city-tag">Ridgefield</span>
+        <span class="city-tag">Shelton</span>
+        <span class="city-tag">Derby</span>
+        <span class="city-tag">Ansonia</span>
+        <span class="city-tag">+ surrounding areas</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="contact-inner">
+    <div>
+      <div class="section-label">Get In Touch</div>
+      <h2>Call or Text<br>Anytime</h2>
+      <p class="section-sub">No email needed — just call or text Marvin or Camilo directly. We'll get back to you fast and schedule a free assessment.</p>
+      <div class="contact-cards">
+        <div class="contact-card">
+          <div class="contact-card-icon">📱</div>
+          <div class="contact-card-info">
+            <div class="contact-card-name">Marvin R.</div>
+            <div class="contact-card-num">(203) 400-3674</div>
+            <div class="contact-card-role">Owner &amp; Operator — Call or Text</div>
+          </div>
+        </div>
+        <div class="contact-card">
+          <div class="contact-card-icon">📱</div>
+          <div class="contact-card-info">
+            <div class="contact-card-name">Camilo R.</div>
+            <div class="contact-card-num">(203) 309-8128</div>
+            <div class="contact-card-role">Owner &amp; Operator — Call or Text</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="contact-info-box">
+      <h3>Free Quote — No Pressure</h3>
+      <div class="info-row">
+        <span class="info-icon">🕐</span>
+        <div class="info-text">
+          <strong>Hours</strong>
+          Monday – Sunday, 7:00 AM – 8:00 PM<br>Emergency calls accepted 24/7
+        </div>
+      </div>
+      <div class="info-row">
+        <span class="info-icon">📍</span>
+        <div class="info-text">
+          <strong>Service Area</strong>
+          Stamford · New Haven · Danbury and all cities in between across Fairfield &amp; New Haven Counties
+        </div>
+      </div>
+      <div class="info-row">
+        <span class="info-icon">⚡</span>
+        <div class="info-text">
+          <strong>Response Time</strong>
+          We aim to respond within 1–2 hours. Same-day assessment often available.
+        </div>
+      </div>
+      <div class="info-row">
+        <span class="info-icon">💬</span>
+        <div class="info-text">
+          <strong>Prefer to Text?</strong>
+          That works too. Send a quick message to either number and we'll get right back to you.
+        </div>
+      </div>
+      <a href="tel:2034003674" class="btn-primary" style="margin-top:24px;display:inline-flex;">
+        📞 Call Now — It's Free
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-brand">Premier<span> Cleaning</span> CT</div>
+  <div class="footer-copy">© 2025 Premier Cleaning. Mold Remediation — Connecticut.</div>
+  <div class="footer-phones">
+    <div class="footer-phone"><strong>Marvin:</strong> (203) 400-3674</div>
+    <div class="footer-phone"><strong>Camilo:</strong> (203) 309-8128</div>
+  </div>
+</footer>
+
+</body>
+</html>
